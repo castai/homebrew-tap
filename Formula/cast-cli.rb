@@ -5,27 +5,28 @@
 class CastCli < Formula
   desc "Multiple clouds in one K8s cluster. Best combination of everything in cloud"
   homepage "https://cast.ai"
-  version "0.0.7"
+  version "0.0.9"
   license "Apache License"
   bottle :unneeded
 
   if OS.mac?
-    url "https://github.com/castai/cast-cli/releases/download/v0.0.7/cast-cli_0.0.7_darwin_amd64.zip"
-    sha256 "c243881d72e447ee3df0abd6190626dbe0c0d8b34348de97b788be608d328c56"
+    url "https://github.com/castai/cast-cli/releases/download/v0.0.9/cast-cli_0.0.9_darwin_amd64.zip"
+    sha256 "1d226467d21de47cbb8cf6d867b328d1f8884169cfbb25decfe2ebf5fcd88d8b"
   end
   if OS.linux? && Hardware::CPU.intel?
-    url "https://github.com/castai/cast-cli/releases/download/v0.0.7/cast-cli_0.0.7_linux_amd64.zip"
-    sha256 "d111ab62e13aa0405280327924967e3c0308e6cc226672339be947e7540edb74"
+    url "https://github.com/castai/cast-cli/releases/download/v0.0.9/cast-cli_0.0.9_linux_amd64.zip"
+    sha256 "3cef10a4e41db14b527adca4fdc837ecffb4dd33f908891f3cc3a4bea52bcf70"
   end
   if OS.linux? && Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-    url "https://github.com/castai/cast-cli/releases/download/v0.0.7/cast-cli_0.0.7_linux_arm64.zip"
-    sha256 "9f7a890a242127141803570e6a5ff1e2c86aa93a49f6bf84289acbdb81ecbf67"
+    url "https://github.com/castai/cast-cli/releases/download/v0.0.9/cast-cli_0.0.9_linux_arm64.zip"
+    sha256 "e663ea84a96bc7339a8e80503a40c7b963b1a01dad4261135ec1cfd6ac8c4226"
   end
 
   def install
-    bash_completion.install "completions/goreleaser.bash" => "cast"
-    zsh_completion.install "completions/goreleaser.zsh" => "_cast"
-    fish_completion.install "completions/goreleaser.fish"
+    bin.install "cast"
+    bash_completion.install "completions/cast.bash" => "cast"
+    zsh_completion.install "completions/cast.zsh" => "_cast"
+    fish_completion.install "completions/cast.fish"
   end
 
   test do
