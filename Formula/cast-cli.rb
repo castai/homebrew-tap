@@ -5,21 +5,21 @@
 class CastCli < Formula
   desc "Multiple clouds in one K8s cluster. Best combination of everything in cloud"
   homepage "https://cast.ai"
-  version "0.0.9"
+  version "0.0.10"
   license "Apache License"
   bottle :unneeded
 
   if OS.mac?
-    url "https://github.com/castai/cast-cli/releases/download/v0.0.9/cast-cli_0.0.9_darwin_amd64.zip"
-    sha256 "1d226467d21de47cbb8cf6d867b328d1f8884169cfbb25decfe2ebf5fcd88d8b"
+    url "https://github.com/castai/cast-cli/releases/download/v0.0.10/cast-cli_0.0.10_darwin_amd64.zip"
+    sha256 "2e47acefc1b4603690856f50a2b9ef255ece4fc2746565b9850c04d944afe4a4"
   end
   if OS.linux? && Hardware::CPU.intel?
-    url "https://github.com/castai/cast-cli/releases/download/v0.0.9/cast-cli_0.0.9_linux_amd64.zip"
-    sha256 "3cef10a4e41db14b527adca4fdc837ecffb4dd33f908891f3cc3a4bea52bcf70"
+    url "https://github.com/castai/cast-cli/releases/download/v0.0.10/cast-cli_0.0.10_linux_amd64.zip"
+    sha256 "e7ec3fec8a8556d0d8386eee99db5b73876dfdfc3b9e64bd20a31a38edaf1e73"
   end
   if OS.linux? && Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-    url "https://github.com/castai/cast-cli/releases/download/v0.0.9/cast-cli_0.0.9_linux_arm64.zip"
-    sha256 "e663ea84a96bc7339a8e80503a40c7b963b1a01dad4261135ec1cfd6ac8c4226"
+    url "https://github.com/castai/cast-cli/releases/download/v0.0.10/cast-cli_0.0.10_linux_arm64.zip"
+    sha256 "e7d0c27480ace62bd2613324446a9d9177e6415e4bd11aae8af7fe49e9452245"
   end
 
   def install
