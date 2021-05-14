@@ -5,21 +5,21 @@
 class Cli < Formula
   desc "Multiple clouds in one K8s cluster. Best combination of everything in cloud"
   homepage "https://cast.ai"
-  version "0.10.0"
+  version "0.10.1"
   license "Apache License"
   bottle :unneeded
 
   if OS.mac? && Hardware::CPU.intel?
-    url "https://github.com/castai/cli/releases/download/v0.10.0/cli_0.10.0_darwin_amd64.zip"
-    sha256 "2e8abfac164f8ad4a0cec6225903a0ae431fb2406e76060be4fa75ecd88b4540"
+    url "https://github.com/castai/cli/releases/download/v0.10.1/cli_0.10.1_darwin_amd64.zip"
+    sha256 "8f654c435847e5604bb8f8125608f1896f2d14fa61446620c7562bcfdd146371"
   end
   if OS.linux? && Hardware::CPU.intel?
-    url "https://github.com/castai/cli/releases/download/v0.10.0/cli_0.10.0_linux_amd64.zip"
-    sha256 "309b280709478bcfea52af40b82a15f65f4d08da14880e08469b85ca34eb68b1"
+    url "https://github.com/castai/cli/releases/download/v0.10.1/cli_0.10.1_linux_amd64.zip"
+    sha256 "9e18587929514892bd82e0c50bc41d4d6d195a9f40f7cc4e982dc9bae763ec90"
   end
   if OS.linux? && Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-    url "https://github.com/castai/cli/releases/download/v0.10.0/cli_0.10.0_linux_arm64.zip"
-    sha256 "93db1a9835b8815ad99e10c8cabc23218e4fa6c6278139245b8783f37e8865ca"
+    url "https://github.com/castai/cli/releases/download/v0.10.1/cli_0.10.1_linux_arm64.zip"
+    sha256 "d0884d19bb4615924ecb79f83c97beedb57ff97921d47ccdff57b19b0e3f885f"
   end
 
   def install
