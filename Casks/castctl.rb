@@ -3,7 +3,7 @@ cask "castctl" do
   name "castctl"
   desc "CAST AI CLI"
   homepage "https://cast.ai"
-  version "0.1.1"
+  version "0.1.2"
 
   livecheck do
     skip "Auto-generated on release."
@@ -13,23 +13,23 @@ cask "castctl" do
 
   on_macos do
     on_intel do
-      url "https://storage.googleapis.com/castctl/#{version}/castctl_darwin_amd64.tar.gz"
-      sha256 "59f7256344363d6eb3549142186f695883b6588476fe6d39567fdac19123a329"
+      url "https://storage.googleapis.com/castai-castctl/#{version}/castctl_darwin_amd64.tar.gz"
+      sha256 "c333a2edff1578df336b500c0466a0c5e1f144403ec306bf8164ac60945419a5"
     end
     on_arm do
-      url "https://storage.googleapis.com/castctl/#{version}/castctl_darwin_arm64.tar.gz"
-      sha256 "eeda1d5b913d450391d0dd1b23dc3096c0d8e6a81a6d83763592395c884610f8"
+      url "https://storage.googleapis.com/castai-castctl/#{version}/castctl_darwin_arm64.tar.gz"
+      sha256 "b845f958c906c77ef50a0d8cf610405bb103edcff7dea325fa58c4f788cf277a"
     end
   end
 
   on_linux do
     on_intel do
-      url "https://storage.googleapis.com/castctl/#{version}/castctl_linux_amd64.tar.gz"
-      sha256 "723215d4818eec7c192d1faeb406f19cbd5e6b0b1ec234723a1c1dbacfdf7b2b"
+      url "https://storage.googleapis.com/castai-castctl/#{version}/castctl_linux_amd64.tar.gz"
+      sha256 "a95796cd7f0327dd90af31d4de4134f13f5ebba8251ea79a578bb4fee20ef082"
     end
     on_arm do
-      url "https://storage.googleapis.com/castctl/#{version}/castctl_linux_arm64.tar.gz"
-      sha256 "939b56273fcbfd7ec7b9843e8ea882fc0b0fea9db8f9ded157687aa8b53970cf"
+      url "https://storage.googleapis.com/castai-castctl/#{version}/castctl_linux_arm64.tar.gz"
+      sha256 "d07f67e64a92948fc7c4c7e2e9291668fd24e5016066b193f7493ff17d4714dd"
     end
   end
 
