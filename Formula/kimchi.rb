@@ -7,6 +7,8 @@ class Kimchi < Formula
   version "0.0.80"
   license "MIT"
 
+  deprecate! date: "2026-05-25", because: "moved to getkimchi tap"
+
   if OS.mac? && Hardware::CPU.arm?
     url "https://github.com/castai/kimchi/releases/download/v#{version}/kimchi_darwin_arm64.tar.gz"
     sha256 "65d839e9c05a8af3d04e2b5b7b50ce50d8c94ca78d81a910f1201891a92982f7"
