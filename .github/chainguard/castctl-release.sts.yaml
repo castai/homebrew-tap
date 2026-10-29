@@ -1,0 +1,9 @@
+# Trust policy for octo-sts: allows the castctl-release job in castai/kubecast
+# (tag pipelines castctl/v*) to get a short-lived token with contents: write on
+# this repository, so GoReleaser can commit the updated castctl cask.
+issuer: https://gitlab.com
+subject_pattern: 'project_path:castai/kubecast:ref_type:tag:ref:castctl/v.*'
+claim_pattern:
+  project_path: castai/kubecast
+permissions:
+  contents: write
